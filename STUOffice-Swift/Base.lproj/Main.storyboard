@@ -51,30 +51,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="MessageTableViewCell" rowHeight="90" id="oje-Pl-jbp" customClass="MessageTableViewCell" customModule="STUOffice_Swift" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="MessageTableViewCell" rowHeight="90" id="oje-Pl-jbp" customClass="MessageTableViewCell" customModule="STUOffice_Swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oje-Pl-jbp" id="RMH-wk-Cdx">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="null" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oV-eT-V48">
-                                            <rect key="frame" x="8" y="8" width="584" height="30"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" notEnabled="YES"/>
-                                            </accessibility>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJz-Hi-KQB">
+                                            <rect key="frame" x="8" y="8" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="2oV-eT-V48" firstAttribute="top" secondItem="RMH-wk-Cdx" secondAttribute="topMargin" id="9pz-Ks-Ts5"/>
-                                        <constraint firstItem="2oV-eT-V48" firstAttribute="leading" secondItem="RMH-wk-Cdx" secondAttribute="leadingMargin" id="tty-JI-uz9"/>
-                                        <constraint firstItem="2oV-eT-V48" firstAttribute="trailing" secondItem="RMH-wk-Cdx" secondAttribute="trailingMargin" id="zPc-OS-bbi"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yJz-Hi-KQB" secondAttribute="trailing" id="GM2-IP-Drp"/>
+                                        <constraint firstItem="yJz-Hi-KQB" firstAttribute="leading" secondItem="RMH-wk-Cdx" secondAttribute="leadingMargin" id="m8Y-7K-TtG"/>
+                                        <constraint firstItem="yJz-Hi-KQB" firstAttribute="top" secondItem="RMH-wk-Cdx" secondAttribute="topMargin" id="pEa-vV-1rD"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLabel" destination="2oV-eT-V48" id="nLh-nQ-Dqu"/>
+                                    <outlet property="titleLabel" destination="yJz-Hi-KQB" id="fwQ-Yd-6PV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

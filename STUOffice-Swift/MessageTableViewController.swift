@@ -11,7 +11,7 @@ import Alamofire
 import JSONHelper
 
 class MessageTableViewController: UITableViewController {
-    
+   
     var Messages = [Message]()
     
     func loadMessages() {
@@ -20,9 +20,9 @@ class MessageTableViewController: UITableViewController {
                 let jsonString = String(response.result.value!)
                 self.Messages <-- jsonString
                 
-//                for Message in self.Messages {
-//                    print(Message.Title)
-//                }
+                for Message in self.Messages {
+                    print(Message.Title)
+                }
         }
     }
     
@@ -44,7 +44,6 @@ class MessageTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
@@ -59,9 +58,6 @@ class MessageTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MessageTableViewCell
         
         let Message = Messages[indexPath.row]
-        
-        // Configure the cell...
-        
         cell.titleLabel.text = Message.Title
         
         return cell

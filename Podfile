@@ -6,9 +6,9 @@ use_frameworks!
 target 'STUOffice-Swift' do
     # HTTPRequest
     pod 'Alamofire', '~> 3.0'
-    # json init
+    # JSON Deserializer
     pod "JSONHelper"
-    # refresh animation
+    # Refresh View
     pod "DGElasticPullToRefresh"
 end
 
