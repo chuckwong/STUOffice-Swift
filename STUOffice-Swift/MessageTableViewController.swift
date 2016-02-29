@@ -23,6 +23,8 @@ class MessageTableViewController: UITableViewController {
                 for Message in self.Messages {
                     print(Message.Title)
                 }
+                
+                self.tableView.reloadData() // If numberOfRows method returns 0, cellForRow won't be executed:>
         }
     }
     
